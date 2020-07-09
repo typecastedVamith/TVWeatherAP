@@ -29,7 +29,7 @@ namespace WeatherMsTest
         [Then(@"Weather should be within threshold range")]
         public void ThenWeatherShouldBeWithinThresholdRange()
         {
-            Assert.IsTrue((Math.Abs(Math.Abs(ndtv) - Math.Abs(oApi))) > double.Parse(Config.readComparatorThreshold()), "Temperatue is more than threshold, test case failed");
+            Assert.IsFalse((Math.Abs(Math.Abs(ndtv) - Math.Abs(oApi))) > double.Parse(Config.readComparatorThreshold()), "Temperatue is more than threshold, test case failed");
         }
 
     }
